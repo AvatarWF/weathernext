@@ -7,6 +7,7 @@ import { GetServerSideProps } from 'next'
 import { useEffect, useState } from 'react'
 import axios, { HttpStatusCode } from "axios"
 import Weather from '@/component/weather'
+import Header from '@/component/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -73,6 +74,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       {
         loading &&
         <div className="min-h-[90vh] flex flex-col justify-center items-center">

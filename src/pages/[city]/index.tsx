@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { IWeatherSuccessRes, getWeather } from '@/server/weather'
 import { GetServerSideProps } from 'next'
 import Weather from '@/component/weather'
+import Header from '@/component/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +56,7 @@ export default function WeatherPage(props: IWeatherSuccessRes) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header />
             <div className="min-h-[90vh] flex flex-col justify-center items-center">
                 <Weather {...today} isToday={true} city={props.city} className={"min-w-[100%] sm:max-w-full sm:min-w-[50%]"} />
                 <div className='w-full flex flex-row flex-wrap gap-5 mt-5'>
