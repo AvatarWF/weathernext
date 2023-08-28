@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps<IWeatherSuccessRes> = async 
         }
     }
 
-    // return not found page beacuse request doesn't have city param
+    // return not found page because request doesn't have city param
     return {
         notFound: true
     }
@@ -40,8 +40,8 @@ export const getServerSideProps: GetServerSideProps<IWeatherSuccessRes> = async 
 export default function WeatherPage(props: IWeatherSuccessRes) {
     const today = props.result[0]
     const weather = [...props.result].slice(1)
-    console.log(props)
-
+    // console.log(props)
+    
     function renderWeather() {
         return weather.map((items, id) =>
             <Weather key={id} {...items} isToday={false} city={props.city} />

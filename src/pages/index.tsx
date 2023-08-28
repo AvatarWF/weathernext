@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     // request location permission on start
     requestLocation()
-  }, [])
+  }, []);
 
   function requestLocation() {
     // check browser support for geolocation api
